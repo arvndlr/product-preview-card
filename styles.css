@@ -1,0 +1,73 @@
+/* || RESET */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img,
+picture,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border-color: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+@font-face {
+  font-family: "Fraunces";
+  src: url("./assets/fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf") format("truetype");
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Questrial";
+  src: url("./assets/fonts/Questrial-Regular.ttf") format("truetype");
+  font-style: normal;
+}
+
+@media (max-width: 40em) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product {
+    max-width: 21.875em;
+    background-color: aqua;
+  }
+  .product__details {
+    padding: 2em;
+  }
+  .product__title {
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 2em;
+  }
+  .product__subheading {
+    font-family: Questrial;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+  }
+}
