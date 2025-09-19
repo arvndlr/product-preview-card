@@ -50,7 +50,8 @@ ol {
 
 @font-face {
   font-family: "Roboto";
-  src: url("./assets/fonts/Roboto-VariableFont_wdth\,wght.ttf") format("truetype");
+  src: url("./assets/fonts/Roboto-VariableFont_wdth\,wght.ttf")
+    format("truetype");
   font-style: normal;
 }
 
@@ -61,18 +62,89 @@ ol {
   --text-primary: #232526;
   --text-secondary: #616365;
 }
-
-@media (max-width: 40em) {
-  body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: var(--bg-color);
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-color);
+  min-height: 100vh;
+}
+.product {
+  display: flex;
+  max-width: 572px;
+  border-radius: 0.5em;
+  background-color: var(--surface);
+  overflow: hidden;
+}
+.product__preview-container {
+  display: flex;
+  overflow: hidden;
+}
+.product__preview-desktop {
+  object-fit:cover;
+  width: 100%;
+}
+.product__preview-mobile {
+  display: none;
+}
+.product__details {
+  padding: 2em;
+}
+.product__subheading {
+    font-family: Questrial;
+    font-weight: 100;
+    letter-spacing: 0.2em;
   }
+  .product__title {
+    font-family: Fraunces;
+    font-weight: 900;
+    font-size: 2em;
+    margin-top: 1.75rem;
+  }
+  .product__description {
+    color: var(--text-secondary);
+    font-family: Roboto;
+    font-weight: 400;
+    font-size: 0.985em;
+    margin: 2em 0;
+  }
+  .product__price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2em;
+  }
+  .product__price-sale {
+    font-family: Fraunces;
+    color: var(--accent);
+  }
+  .product__price-orig {
+    text-decoration: line-through;
+    color: var(--text-secondary);
+  }
+  .product__btn {
+    background-color: var(--accent);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    border-radius: 0.5em;
+    color: var(--surface);
+    gap: 0.5em;
+  }
+@media (max-width: 40em) {
   .product {
+    flex-direction: column;
     max-width: 21.875em;
     background-color: var(--surface);
     border-radius: 0.5em;
+  }
+  .product__preview-desktop {
+    display: none;
+  }
+  .product__preview-mobile {
+    display: flex;
+    object-fit: cover;
   }
   .product__details {
     padding: 2em;
