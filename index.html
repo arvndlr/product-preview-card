@@ -18,21 +18,19 @@
   </head>
   <body>
     <main class="product">
-      <div class="product__preview-container">
+      <picture>
+        <source
+          media="(min-width: 768px)"
+          srcset="./images/image-product-desktop.jpg"
+        />
         <img
+          class="product__preview"
           src="./images/image-product-mobile.jpg"
-          alt="Preview image of Grabrielle Essence Eau De Parfum"
-          class="product__preview-mobile"
+          alt="image product"
         />
-        <img
-          src="./images/image-product-desktop.jpg"
-          alt="Preview image of Grabrielle Essence Eau De Parfum"
-          class="product__preview-desktop"
-        />
-      </div>
-
+      </picture>
       <div class="product__details">
-        <h3 class="product__subheading">PERFUME</h3>
+        <span class="product__subheading">PERFUME</span>
         <h1 class="product__title">Gabrielle Essence Eau De Parfum</h1>
         <p class="product__description">
           A floral, solar and voluptuous interpretation composed by Olivier
@@ -47,26 +45,5 @@
         </button>
       </div>
     </main>
-
-    <div class="attribution">
-      <span
-        >Challenge by
-        <a
-          href="https://www.frontendmentor.io?ref=challenge"
-          target="_blank"
-          class="attribution__fm"
-          >Frontend Mentor</a
-        >.</span
-      >
-      <span
-        >Coded by
-        <a
-          href="https://www.linkedin.com/in/arvndlr/"
-          class="attribution__author"
-        >
-          Arvin M. Delos Reyes</a
-        >.</span
-      >
-    </div>
   </body>
 </html>
