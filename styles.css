@@ -61,6 +61,7 @@ ol {
   --surface: #ffffff;
   --text-primary: #232526;
   --text-secondary: #616365;
+  --active: #1a4031;
 }
 body {
   display: flex;
@@ -72,7 +73,7 @@ body {
 }
 .product {
   display: flex;
-  max-width: 572px;
+  max-width: 650px;
   border-radius: 0.5em;
   background-color: var(--surface);
   overflow: hidden;
@@ -82,7 +83,7 @@ body {
   overflow: hidden;
 }
 .product__preview-desktop {
-  object-fit:cover;
+  object-fit: cover;
   width: 100%;
 }
 .product__preview-mobile {
@@ -92,52 +93,74 @@ body {
   padding: 2em;
 }
 .product__subheading {
-    font-family: Questrial;
-    font-weight: 100;
-    letter-spacing: 0.2em;
-  }
-  .product__title {
-    font-family: Fraunces;
-    font-weight: 900;
-    font-size: 2em;
-    margin-top: 1.75rem;
-  }
-  .product__description {
-    color: var(--text-secondary);
-    font-family: Roboto;
-    font-weight: 400;
-    font-size: 0.985em;
-    margin: 2em 0;
-  }
-  .product__price {
-    display: flex;
-    align-items: center;
-    margin-bottom: 2em;
-  }
-  .product__price-sale {
-    font-family: Fraunces;
-    color: var(--accent);
-  }
-  .product__price-orig {
-    text-decoration: line-through;
-    color: var(--text-secondary);
-  }
-  .product__btn {
-    background-color: var(--accent);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    padding: 1em;
-    border-radius: 0.5em;
-    color: var(--surface);
-    gap: 0.5em;
-  }
+  font-family: Questrial;
+  font-weight: 100;
+  letter-spacing: 0.2em;
+  color: var(--text-secondary);
+}
+.product__title {
+  font-family: Fraunces;
+  font-weight: 900;
+  font-size: 2em;
+  margin-top: 1.75rem;
+}
+.product__description {
+  color: var(--text-secondary);
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 0.985em;
+  margin: 2em 0;
+}
+.product__price {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+  gap: 1em;
+}
+.product__price-sale {
+  font-family: Fraunces;
+  color: var(--accent);
+}
+.product__price-orig {
+  text-decoration: line-through;
+  color: var(--text-secondary);
+}
+.product__btn {
+  background-color: var(--accent);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 1em;
+  border-radius: 0.5em;
+  color: var(--surface);
+  gap: 0.5em;
+}
+.product__btn:hover {
+  background-color: var(--active);
+  cursor: pointer;
+}
+.attribution {
+  margin-block: 0.5em;
+}
+.attribution__fm{
+  color: rgb(38, 89, 177);
+}
+.attribution__fm:hover, .attribution__fm:active{
+  color: rgb(77, 132, 227);
+}
+.attribution__author  {
+  color: #9a1cc8;
+}
+.attribution__author:hover, .attribution__author:active  {
+  color: #ca63f0;
+}
 @media (max-width: 40em) {
   .product {
     flex-direction: column;
     max-width: 21.875em;
     background-color: var(--surface);
     border-radius: 0.5em;
+    margin-top: 1em;
   }
   .product__preview-desktop {
     display: none;
@@ -190,5 +213,10 @@ body {
     border-radius: 0.5em;
     color: var(--surface);
     gap: 0.5em;
+  }
+  .attribution {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
   }
 }
