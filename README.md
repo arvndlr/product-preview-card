@@ -29,7 +29,6 @@ Users should be able to:
 ### Screenshot
 
 ![](./actual/desktop-view.jpeg)
-![](./actual/mobile-view.jpeg)
 
 
 ### Links
